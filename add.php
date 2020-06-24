@@ -19,7 +19,7 @@
 
                     $sql = "SELECT * FROM studentclass";
             
-                    $result = mysqli_query($con, $sql) or die("Query Unseccessful.");
+                    $result = mysqli_query($con, $sql) or die("Query Unsuccessful.");
 
                     while($row = mysqli_fetch_assoc($result)){
 

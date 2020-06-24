@@ -8,9 +8,9 @@
     $con = mysqli_connect("localhost", "root", "", "crud") or die("connect Faild");
 
     $sql = "INSERT INTO student(sname,saddress,sclass,sphone) VALUES('{$stu_name}', '{$stu_address}', '{$stu_class}', '{$stu_phone}')";
-    $result = mysqli_query($con, $sql) or die("Query Unseccessful.");
+    $result = mysqli_query($con, $sql) or die("Query Unsuccessful.");
 
-    header("localhost:index.php");
+    header("location:index.php");
 
     mysqli_close($con);
 

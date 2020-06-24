@@ -9,7 +9,7 @@ include 'header.php';
 
         $sql = "SELECT * FROM student JOIN studentclass WHERE student.sclass = studentclass.cid";
 
-        $result = mysqli_query($con, $sql) or die("Query Unseccessful.");
+        $result = mysqli_query($con, $sql) or die("Query Unsuccessful.");
 
         if(mysqli_num_rows($result) > 0){
 
@@ -37,7 +37,7 @@ include 'header.php';
                 <td><?php echo $row['cname'] ?></td>
                 <td><?php echo $row['sphone'] ?></td>
                 <td>
-                    <a href='edit.php'>Edit</a>
+                    <a href='edit.php?id=<?php echo $row['sid'] ?>'>Edit</a>
                     <a href='delete-inline.php'>Delete</a>
                 </td>
             </tr>
