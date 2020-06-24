@@ -5,7 +5,7 @@ include 'header.php';
     <h2>All Records</h2>
     <?php
     
-        $con = mysqli_connect("localhost", "root", "", "crud") or die("connect Faild");
+        include 'config.php';
 
         $sql = "SELECT * FROM student JOIN studentclass WHERE student.sclass = studentclass.cid";
 
@@ -38,7 +38,7 @@ include 'header.php';
                 <td><?php echo $row['sphone'] ?></td>
                 <td>
                     <a href='edit.php?id=<?php echo $row['sid'] ?>'>Edit</a>
-                    <a href='delete-inline.php'>Delete</a>
+                    <a href='delete-inline.php?id=<?php echo $row['sid'] ?>'>Delete</a>
                 </td>
             </tr>
             <?php } ?>

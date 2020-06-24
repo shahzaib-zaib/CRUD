@@ -11,7 +11,7 @@
 
     <?php
     if(isset($_POST['showbtn'])){
-        $con = mysqli_connect("localhost", "root", "", "crud") or die("connect Faild");
+            include 'config.php';
 
             $stu_id = $_POST['sid'];
             $sql = "SELECT * FROM student WHERE sid = {$stu_id}";

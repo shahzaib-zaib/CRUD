@@ -5,7 +5,7 @@
     echo $stu_class = $_POST['class'];
     echo $stu_phone = $_POST['sphone'];
 
-    $con = mysqli_connect("localhost", "root", "", "crud") or die("connect Faild");
+    include 'config.php';
 
     $sql = "INSERT INTO student(sname,saddress,sclass,sphone) VALUES('{$stu_name}', '{$stu_address}', '{$stu_class}', '{$stu_phone}')";
     $result = mysqli_query($con, $sql) or die("Query Unsuccessful.");
